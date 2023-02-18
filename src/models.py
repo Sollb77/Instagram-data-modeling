@@ -23,7 +23,7 @@ class Followers(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    followers_id = (Integer, ForeignKey("users.id"))
+    followers_id = Column(Integer, ForeignKey("users.id"))
     user_id = Column(Integer, ForeignKey("users.id"))
    
 class Likes(Base):
